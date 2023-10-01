@@ -21,12 +21,16 @@ config({
 //middleware
 app.use(express.json());
 app.use(cookieParser());
+
+
 app.use(
   cors({
   origin:[process.env.FRONTEND_URL],
   methods: ["GET","POST","DELETE","PUT"],
   credentials:true,
 }))
+
+
 
 app.use("/api/v1/users",useRouter);
 app.use("/api/v1/task",taskRouter);
@@ -44,13 +48,4 @@ app.get('/',(req,res)=>{
 
 // error handler.. or error middleware..
 app.use(errorMiddleware);
-
-
-
-
-
-
-
-
-
 

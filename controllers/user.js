@@ -4,10 +4,10 @@ import jwt from "jsonwebtoken";
 import { sendCookie } from "../utils/features.js";
 import ErrorHandler from "../middlewares/error.js";
 
-export const getAllUsers =async (req,res)=>{
+// export const getAllUsers =async (req,res)=>{
 
 
-};
+// };
 
 export const login =async(req,res,next)=>{
 
